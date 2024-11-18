@@ -12,12 +12,20 @@ class ViewController: UIViewController {
     private let resultLabel: UILabel = {
         let label: UILabel = .init()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "12345"
+        label.text = "0"
         label.textAlignment = .right
+        label.lineBreakMode = .byTruncatingHead
         label.font = UIFont.boldSystemFont(ofSize: 60)
         return label
     }()
     
+    private var resultBuffer: String = "0" {
+        didSet {
+            DispatchQueue.main.async {
+                self.resultLabel.text = self.resultBuffer
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(resultLabel)
@@ -60,6 +68,8 @@ class ViewController: UIViewController {
             button.layer.cornerRadius = height / 2
             button.heightAnchor.constraint(equalToConstant: height).isActive = true
             button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
+            
+            button.addAction(addAction(handler: tappedKeyPadButton), for: .touchUpInside)
             return button
         }
     }
@@ -85,6 +95,32 @@ class ViewController: UIViewController {
         return horizontalStackView
     }
     
+    // MARK: - User Actions
+    private func addAction(handler: @escaping ((UIAction) -> Void)) -> UIAction {
+        // typealias UIActionHandler = (UIAction) -> Void
+        UIAction(handler: handler)
+    }
+    
+    private func tappedKeyPadButton(_ action: UIAction) {
+        guard let button = action.sender as? UIButton,
+              let buttonTitle = button.title(for: .normal)
+        else { return }
+        
+        let operatorTitles: Set<String> = ["+", "-", "*", "/", "=", "AC"]
+        
+        switch buttonTitle {
+        case let `operator` where operatorTitles.contains(`operator`):
+            print(`operator`)
+        default:
+            guard !(buttonTitle == "0" && resultBuffer == "0") else { return }
+            if resultBuffer.count == 1, resultBuffer == "0" {
+                resultBuffer = ""
+            }
+            resultBuffer.append(buttonTitle)
+            
+            print(buttonTitle)
+        }
+    }
 }
 
 @available(iOS 17.0, *)
