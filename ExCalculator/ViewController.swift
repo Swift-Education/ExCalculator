@@ -110,6 +110,9 @@ class ViewController: UIViewController {
         
         switch buttonTitle {
         case let `operator` where operatorTitles.contains(`operator`):
+            if `operator` == "AC" {
+                resultBuffer = "0"
+            }
             print(`operator`)
         default:
             guard !(buttonTitle == "0" && resultBuffer == "0") else { return }
