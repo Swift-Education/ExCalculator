@@ -28,15 +28,19 @@ class ViewController: UIViewController {
             resultLabel.heightAnchor.constraint(equalToConstant: 100)
         ])
         
-        let stackView = makeHorizontalStackView(makeKeypadButton(["7", "8", "9", "+"]))
+        let stackView1 = makeHorizontalStackView(makeKeypadButton(["7", "8", "9", "+"]))
+        let stackView2 = makeHorizontalStackView(makeKeypadButton(["4", "5", "7", "-"]))
+        let stackView3 = makeHorizontalStackView(makeKeypadButton(["1", "2", "3", "*"]))
+        let stackView4 = makeHorizontalStackView(makeKeypadButton(["AC", "0", "=", "/"]))
+        
+        let stackView = makeVerticalStackView([stackView1, stackView2, stackView3, stackView4])
+        
         view.addSubview(stackView)
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 60),
-            stackView.leadingAnchor.constraint(equalTo: resultLabel.leadingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: resultLabel.trailingAnchor, constant: -10),
-            stackView.heightAnchor.constraint(equalToConstant: 80)
+            stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            stackView.widthAnchor.constraint(equalToConstant: 350)
         ])
-        
     }
     
     private func makeKeypadButton(_ titles: [String]) -> [UIButton] {
@@ -47,14 +51,26 @@ class ViewController: UIViewController {
             button.backgroundColor = UIColor(red: 58/255, green: 58/255, blue: 58/255, alpha: 1.0)
             button.frame.size = CGSize(width: 80, height: 80)
             button.layer.cornerRadius = 40
+            button.heightAnchor.constraint(equalToConstant: 80).isActive = true
+            button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
             return button
         }
     }
     
     private func makeHorizontalStackView(_ views: [UIView]) -> UIStackView {
         let horizontalStackView = UIStackView()
-        horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
         horizontalStackView.axis = .horizontal
+        horizontalStackView.spacing = 10
+        horizontalStackView.distribution = .fillEqually
+        
+        views.forEach { horizontalStackView.addArrangedSubview($0) }
+        return horizontalStackView
+    }
+    
+    private func makeVerticalStackView(_ views: [UIView]) -> UIStackView {
+        let horizontalStackView = UIStackView()
+        horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+        horizontalStackView.axis = .vertical
         horizontalStackView.spacing = 10
         horizontalStackView.distribution = .fillEqually
         
@@ -64,3 +80,7 @@ class ViewController: UIViewController {
     
 }
 
+@available(iOS 17.0, *)
+#Preview {
+    ViewController()
+}
