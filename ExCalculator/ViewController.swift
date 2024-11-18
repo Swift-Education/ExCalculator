@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             button.backgroundColor = orangeTitles.contains($0) ? orangeColor : grayColor
             
             let height: CGFloat = 80
-            
+            button.layer.cornerRadius = height / 2
             button.heightAnchor.constraint(equalToConstant: height).isActive = true
             button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
             return button
