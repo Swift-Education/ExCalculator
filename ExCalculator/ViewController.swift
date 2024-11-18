@@ -110,8 +110,14 @@ class ViewController: UIViewController {
         
         switch buttonTitle {
         case let `operator` where operatorTitles.contains(`operator`):
+            guard resultBuffer.last!.isNumber else { return }
             if `operator` == "AC" {
                 resultBuffer = "0"
+            } else if `operator` == "=" {
+                guard let result = calculate(expression: resultBuffer) else { return }
+                resultBuffer = result.description
+            } else {
+                resultBuffer.append(`operator`)
             }
             print(`operator`)
         default:
@@ -122,6 +128,15 @@ class ViewController: UIViewController {
             resultBuffer.append(buttonTitle)
             
             print(buttonTitle)
+        }
+    }
+    
+    private func calculate(expression: String) -> Int? {
+        let expression = NSExpression(format: expression)
+        if let result = expression.expressionValue(with: nil, context: nil) as? Int {
+            return result
+        } else {
+            return nil
         }
     }
 }
