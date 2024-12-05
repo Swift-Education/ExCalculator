@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CalculatorModel {
+final class CalculatorModel {
     private var resultBuffer: String = "0" {
         didSet {
             didChangedResultBuffer?(resultBuffer)

@@ -7,61 +7,34 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
-
+final class CalculatorViewController: UIViewController {
+    private let model: CalculatorModel = .init()
     private let calculatorView: CalculatorView = .init()
-    private var resultBuffer: String = "0" {
-        didSet {
-            DispatchQueue.main.async {
-                self.calculatorView.resultLabel.text = self.resultBuffer
-            }
-        }
-    }
     
     override func loadView() {
-        calculatorView.delegate = self
+        calculatorView.setDelegate(self)
         view = calculatorView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bind()
+    }
+    
+    private func bind() {
+        model.didChangedResultBuffer = { [weak self] in
+            self?.calculatorView.setResultLabel(to: $0)
+        }
     }
 }
 
-extension CalculatorViewController: CalculatorViewDelegate {
+extension CalculatorViewController: KeypadViewDelegate {
     func tappedKeyPadButton(with buttonTitle: String) {
-        let operatorTitles: Set<String> = ["+", "-", "*", "/", "=", "AC"]
-        
-        switch buttonTitle {
-        case let `operator` where operatorTitles.contains(`operator`):
-            guard resultBuffer.last!.isNumber else { return }
-            if `operator` == "AC" {
-                resultBuffer = "0"
-            } else if `operator` == "=" {
-                guard let result = calculate(expression: resultBuffer) else { return }
-                resultBuffer = result.description
-            } else {
-                resultBuffer.append(`operator`)
-            }
-            print(`operator`)
-        default:
-            guard !(buttonTitle == "0" && resultBuffer == "0") else { return }
-            if resultBuffer.count == 1, resultBuffer == "0" {
-                resultBuffer = ""
-            }
-            resultBuffer.append(buttonTitle)
-            
-            print(buttonTitle)
-        }
+        model.tappedKeyPadButton(with: buttonTitle)
     }
-    
-    private func calculate(expression: String) -> Int? {
-        let expression = NSExpression(format: expression)
-        if let result = expression.expressionValue(with: nil, context: nil) as? Int {
-            return result
-        } else {
-            return nil
-        }
-    }
+}
+
+@available(iOS 17.0, *)
+#Preview {
+    CalculatorViewController()
 }
