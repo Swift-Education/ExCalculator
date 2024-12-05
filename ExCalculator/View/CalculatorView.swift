@@ -20,7 +20,7 @@ final class CalculatorView: UIView {
     
     private let keypadView = KeypadView(titles: [
         ["7", "8", "9", "+"],
-        ["4", "5", "7", "-"],
+        ["4", "5", "6", "-"],
         ["1", "2", "3", "*"],
         ["AC", "0", "=", "/"],
     ])
