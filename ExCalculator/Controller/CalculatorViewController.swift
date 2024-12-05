@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculatorViewController.swift
 //  ExCalculator
 //
 //  Created by 강동영 on 11/11/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     private let resultLabel: UILabel = {
         let label: UILabel = .init()
@@ -47,9 +47,11 @@ class ViewController: UIViewController {
         
         view.addSubview(stackView)
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 60),
+//            stackView.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 200),
             stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            stackView.widthAnchor.constraint(equalToConstant: 350)
+            stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -60),
+            stackView.heightAnchor.constraint(equalTo: stackView.widthAnchor),
+            stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant:  -60),
         ])
     }
     
@@ -141,7 +143,3 @@ class ViewController: UIViewController {
     }
 }
 
-@available(iOS 17.0, *)
-#Preview {
-    ViewController()
-}
