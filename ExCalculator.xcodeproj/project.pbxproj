@@ -12,7 +12,6 @@
 		B55D13EB2CE2094900C73A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D13E72CE2094900C73A8B /* ViewController.swift */; };
 		B55D13EC2CE2094900C73A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55D13E02CE2094900C73A8B /* Assets.xcassets */; };
 		B55D13EE2CE2094900C73A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55D13E32CE2094900C73A8B /* LaunchScreen.storyboard */; };
-		B55D13EF2CE2094900C73A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55D13E52CE2094900C73A8B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +20,6 @@
 		B55D13E02CE2094900C73A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B55D13E12CE2094900C73A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B55D13E22CE2094900C73A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B55D13E42CE2094900C73A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B55D13E62CE2094900C73A8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B55D13E72CE2094900C73A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 				B55D13E02CE2094900C73A8B /* Assets.xcassets */,
 				B55D13E12CE2094900C73A8B /* Info.plist */,
 				B55D13E32CE2094900C73A8B /* LaunchScreen.storyboard */,
-				B55D13E52CE2094900C73A8B /* Main.storyboard */,
 				B55D13E62CE2094900C73A8B /* SceneDelegate.swift */,
 				B55D13E72CE2094900C73A8B /* ViewController.swift */,
 			);
@@ -130,7 +127,6 @@
 			files = (
 				B55D13EC2CE2094900C73A8B /* Assets.xcassets in Resources */,
 				B55D13EE2CE2094900C73A8B /* LaunchScreen.storyboard in Resources */,
-				B55D13EF2CE2094900C73A8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,14 +154,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		B55D13E52CE2094900C73A8B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B55D13E42CE2094900C73A8B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -180,7 +168,6 @@
 				INFOPLIST_FILE = ExCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
@@ -212,7 +199,6 @@
 				INFOPLIST_FILE = ExCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
