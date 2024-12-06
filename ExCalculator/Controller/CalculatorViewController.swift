@@ -23,7 +23,7 @@ final class CalculatorViewController: UIViewController {
     
     override func loadView() {
         calculatorView.setDelegate(self)
-        view = calculatorView as? UIView
+        view = (calculatorView as! UIView)
     }
 
     override func viewDidLoad() {
