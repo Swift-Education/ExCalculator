@@ -22,8 +22,8 @@ final class CalculatorViewController: UIViewController {
     }
     
     private func bind() {
-        model.didChangedResultBuffer = { [weak self] in
-            self?.calculatorView.setResultLabel(to: $0)
+        model.didChangedResultBuffer = { [unowned self] in
+            self.calculatorView.setResultLabel(to: $0)
         }
     }
 }
