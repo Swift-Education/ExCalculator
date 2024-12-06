@@ -11,9 +11,14 @@
 		B502CBC42D01D6D000D7CB13 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBC32D01D6D000D7CB13 /* CalculatorView.swift */; };
 		B502CBC62D01DA7000D7CB13 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBC52D01DA7000D7CB13 /* KeypadView.swift */; };
 		B502CBC92D020C4000D7CB13 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBC82D020C4000D7CB13 /* CalculatorModel.swift */; };
-		B502CC012D02D6C800D7CB13 /* ExCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBFF2D02D6C800D7CB13 /* ExCalculatorTests.swift */; };
 		B502CC142D02D6E300D7CB13 /* ExCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC112D02D6E300D7CB13 /* ExCalculatorUITests.swift */; };
 		B502CC152D02D6E300D7CB13 /* ExCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC122D02D6E300D7CB13 /* ExCalculatorUITestsLaunchTests.swift */; };
+		B502CC172D02DEC500D7CB13 /* CalculatorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC162D02DEC500D7CB13 /* CalculatorViewTests.swift */; };
+		B502CC192D02EC6700D7CB13 /* MockKeypadViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC182D02EC6700D7CB13 /* MockKeypadViewDelegate.swift */; };
+		B502CC1B2D02FE2200D7CB13 /* CalculatorControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC1A2D02FE2200D7CB13 /* CalculatorControllerTests.swift */; };
+		B502CC1D2D02FEAD00D7CB13 /* MockCalculatorModel+Impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC1C2D02FEAD00D7CB13 /* MockCalculatorModel+Impl.swift */; };
+		B502CC1F2D02FEB600D7CB13 /* MockCalculatorView+Impl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC1E2D02FEB600D7CB13 /* MockCalculatorView+Impl.swift */; };
+		B502CC252D0327EB00D7CB13 /* CalculatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC232D0327EB00D7CB13 /* CalculatorModelTests.swift */; };
 		B55D13E92CE2094900C73A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D13DF2CE2094900C73A8B /* AppDelegate.swift */; };
 		B55D13EA2CE2094900C73A8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D13E62CE2094900C73A8B /* SceneDelegate.swift */; };
 		B55D13EC2CE2094900C73A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55D13E02CE2094900C73A8B /* Assets.xcassets */; };
@@ -43,10 +48,15 @@
 		B502CBC52D01DA7000D7CB13 /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
 		B502CBC82D020C4000D7CB13 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		B502CBF62D02D6C100D7CB13 /* ExCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B502CBFF2D02D6C800D7CB13 /* ExCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCalculatorTests.swift; sourceTree = "<group>"; };
 		B502CC062D02D6DC00D7CB13 /* ExCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B502CC112D02D6E300D7CB13 /* ExCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCalculatorUITests.swift; sourceTree = "<group>"; };
 		B502CC122D02D6E300D7CB13 /* ExCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B502CC162D02DEC500D7CB13 /* CalculatorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewTests.swift; sourceTree = "<group>"; };
+		B502CC182D02EC6700D7CB13 /* MockKeypadViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKeypadViewDelegate.swift; sourceTree = "<group>"; };
+		B502CC1A2D02FE2200D7CB13 /* CalculatorControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorControllerTests.swift; sourceTree = "<group>"; };
+		B502CC1C2D02FEAD00D7CB13 /* MockCalculatorModel+Impl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockCalculatorModel+Impl.swift"; sourceTree = "<group>"; };
+		B502CC1E2D02FEB600D7CB13 /* MockCalculatorView+Impl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockCalculatorView+Impl.swift"; sourceTree = "<group>"; };
+		B502CC232D0327EB00D7CB13 /* CalculatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModelTests.swift; sourceTree = "<group>"; };
 		B55D13C72CE208CC00C73A8B /* ExCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55D13DF2CE2094900C73A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B55D13E02CE2094900C73A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +118,9 @@
 		B502CC002D02D6C800D7CB13 /* ExCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				B502CBFF2D02D6C800D7CB13 /* ExCalculatorTests.swift */,
+				B502CC242D0327EB00D7CB13 /* Model */,
+				B502CC262D03281500D7CB13 /* View */,
+				B502CC292D03283400D7CB13 /* Controller */,
 			);
 			path = ExCalculatorTests;
 			sourceTree = "<group>";
@@ -120,6 +132,49 @@
 				B502CC122D02D6E300D7CB13 /* ExCalculatorUITestsLaunchTests.swift */,
 			);
 			path = ExCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		B502CC242D0327EB00D7CB13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B502CC232D0327EB00D7CB13 /* CalculatorModelTests.swift */,
+				B502CC282D03282400D7CB13 /* Mock */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B502CC262D03281500D7CB13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B502CC162D02DEC500D7CB13 /* CalculatorViewTests.swift */,
+				B502CC272D03281D00D7CB13 /* Mock */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B502CC272D03281D00D7CB13 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B502CC182D02EC6700D7CB13 /* MockKeypadViewDelegate.swift */,
+				B502CC1E2D02FEB600D7CB13 /* MockCalculatorView+Impl.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B502CC282D03282400D7CB13 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B502CC1C2D02FEAD00D7CB13 /* MockCalculatorModel+Impl.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B502CC292D03283400D7CB13 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B502CC1A2D02FE2200D7CB13 /* CalculatorControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B55D13BE2CE208CC00C73A8B = {
@@ -294,7 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B502CC012D02D6C800D7CB13 /* ExCalculatorTests.swift in Sources */,
+				B502CC192D02EC6700D7CB13 /* MockKeypadViewDelegate.swift in Sources */,
+				B502CC1D2D02FEAD00D7CB13 /* MockCalculatorModel+Impl.swift in Sources */,
+				B502CC1F2D02FEB600D7CB13 /* MockCalculatorView+Impl.swift in Sources */,
+				B502CC252D0327EB00D7CB13 /* CalculatorModelTests.swift in Sources */,
+				B502CC172D02DEC500D7CB13 /* CalculatorViewTests.swift in Sources */,
+				B502CC1B2D02FE2200D7CB13 /* CalculatorControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,13 @@
 import Foundation
 
 final class CalculatorModel {
-    private var resultBuffer: String = "0" {
+    private(set) var resultBuffer: String = "0" {
         didSet {
             didChangedResultBuffer?(resultBuffer)
         }
     }
     private let operatorTitles: Set<String> = ["+", "-", "*", "/", "=", "AC"]
     var didChangedResultBuffer: ((String) -> ())? = { _ in }
-    
-    func setBuffer(with value: String) {
-        resultBuffer = value
-    }
     
     func tappedKeyPadButton(with buttonTitle: String) {
         switch buttonTitle {

@@ -7,8 +7,13 @@
 
 import UIKit
 
-final class CalculatorView: UIView {
-    private let resultLabel: UILabel = {
+protocol CalculatorViewAble {
+    func setDelegate(_ target: KeypadViewDelegate)
+    func setResultLabel(to value: String)
+}
+
+final class CalculatorView: UIView, CalculatorViewAble {
+    private(set) var resultLabel: UILabel = {
         let label: UILabel = .init()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "0"
