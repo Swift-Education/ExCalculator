@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B502CBC42D01D6D000D7CB13 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBC32D01D6D000D7CB13 /* CalculatorView.swift */; };
-		B502CBC62D01DA7000D7CB13 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBC52D01DA7000D7CB13 /* KeypadView.swift */; };
 		B502CBC92D020C4000D7CB13 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CBC82D020C4000D7CB13 /* CalculatorModel.swift */; };
 		B502CC142D02D6E300D7CB13 /* ExCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC112D02D6E300D7CB13 /* ExCalculatorUITests.swift */; };
 		B502CC152D02D6E300D7CB13 /* ExCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC122D02D6E300D7CB13 /* ExCalculatorUITestsLaunchTests.swift */; };
@@ -43,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B502CBC32D01D6D000D7CB13 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
-		B502CBC52D01DA7000D7CB13 /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
 		B502CBC82D020C4000D7CB13 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		B502CBF62D02D6C100D7CB13 /* ExCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B502CC062D02D6DC00D7CB13 /* ExCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				B502CC2D2D0417A800D7CB13 /* NewCalulatorView.swift */,
-				B502CBC32D01D6D000D7CB13 /* CalculatorView.swift */,
-				B502CBC52D01DA7000D7CB13 /* KeypadView.swift */,
 				B502CC312D04570300D7CB13 /* NewKeypadView.swift */,
 			);
 			path = View;
@@ -362,8 +356,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B502CC2B2D03F83D00D7CB13 /* ExCalulatorApp.swift in Sources */,
-				B502CBC42D01D6D000D7CB13 /* CalculatorView.swift in Sources */,
-				B502CBC62D01DA7000D7CB13 /* KeypadView.swift in Sources */,
 				B502CBC92D020C4000D7CB13 /* CalculatorModel.swift in Sources */,
 				B502CC2E2D0417B000D7CB13 /* NewCalulatorView.swift in Sources */,
 				B502CC322D04570300D7CB13 /* NewKeypadView.swift in Sources */,
