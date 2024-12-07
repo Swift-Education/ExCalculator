@@ -5,16 +5,12 @@
 //  Created by 강동영 on 12/6/24.
 //
 
-import Foundation
+import SwiftUI
 
-final class CalculatorModel {
-    private(set) var resultBuffer: String = "0" {
-        didSet {
-            didChangedResultBuffer?(resultBuffer)
-        }
-    }
+final class CalculatorModel: ObservableObject {
+    @Published private(set) var resultBuffer: String = "0"
+    
     private let operatorTitles: Set<String> = ["+", "-", "*", "/", "=", "AC"]
-    var didChangedResultBuffer: ((String) -> ())? = { _ in }
     
     func tappedKeyPadButton(with buttonTitle: String) {
         switch buttonTitle {
