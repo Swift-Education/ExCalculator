@@ -10,6 +10,17 @@ import SwiftUI
 final class CalculatorModel: ObservableObject {
     @Published private(set) var resultBuffer: String = "0"
     
+    private let buttonTitles: [[String]] = [
+        ["7", "8", "9", "+"],
+        ["4", "5", "6", "-"],
+        ["1", "2", "3", "*"],
+        ["AC", "0", "=", "/"],
+    ]
+    
+    func getTitles() -> [[String]] {
+        return buttonTitles
+    }
+    
     private let operatorTitles: Set<String> = ["+", "-", "*", "/", "=", "AC"]
     
     func tappedKeyPadButton(with buttonTitle: String) {

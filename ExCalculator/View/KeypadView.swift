@@ -1,5 +1,5 @@
 //
-//  NewCalulatorView.swift
+//  KeypadView.swift
 //  ExCalculator
 //
 //  Created by 강동영 on 12/7/24.
@@ -7,24 +7,16 @@
 
 import SwiftUI
 
-struct NewCalulatorView: View {
-    @ObservedObject private var model: CalculatorModel = .init()
-    private let buttonTitles: [[String]] = [
-        ["7", "8", "9", "+"],
-        ["4", "5", "6", "-"],
-        ["1", "2", "3", "*"],
-        ["AC", "0", "=", "/"],
-    ]
+struct KeypadView: View {
+    private var model: CalculatorModel
+    
+    init(model: CalculatorModel) {
+        self.model = model
+    }
     
     var body: some View {
-        Spacer()
-        Text(model.resultBuffer)
-            .font(.system(size: 60))
-            .frame(maxWidth: .infinity, alignment: .trailing)
-            .padding(.trailing)
-        Spacer()
-        
         VStack {
+            let buttonTitles = model.getTitles()
             ForEach(0..<buttonTitles.count, id: \.self) { rowIndex in
                 HStack {
                     ForEach(0..<buttonTitles[rowIndex].count, id: \.self) { columnIndex in
@@ -46,10 +38,5 @@ struct NewCalulatorView: View {
                 }
             }
         }
-        .padding(.all)
     }
-}
-
-#Preview {
-    NewCalulatorView()
 }
