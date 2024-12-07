@@ -20,6 +20,7 @@
 		B502CC252D0327EB00D7CB13 /* CalculatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC232D0327EB00D7CB13 /* CalculatorModelTests.swift */; };
 		B502CC2B2D03F83D00D7CB13 /* ExCalulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC2A2D03F83700D7CB13 /* ExCalulatorApp.swift */; };
 		B502CC2E2D0417B000D7CB13 /* NewCalulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC2D2D0417A800D7CB13 /* NewCalulatorView.swift */; };
+		B502CC322D04570300D7CB13 /* NewKeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B502CC312D04570300D7CB13 /* NewKeypadView.swift */; };
 		B55D13EC2CE2094900C73A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55D13E02CE2094900C73A8B /* Assets.xcassets */; };
 		B55D13EE2CE2094900C73A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55D13E32CE2094900C73A8B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		B502CC232D0327EB00D7CB13 /* CalculatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModelTests.swift; sourceTree = "<group>"; };
 		B502CC2A2D03F83700D7CB13 /* ExCalulatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCalulatorApp.swift; sourceTree = "<group>"; };
 		B502CC2D2D0417A800D7CB13 /* NewCalulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCalulatorView.swift; sourceTree = "<group>"; };
+		B502CC312D04570300D7CB13 /* NewKeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKeypadView.swift; sourceTree = "<group>"; };
 		B55D13C72CE208CC00C73A8B /* ExCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55D13E02CE2094900C73A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B55D13E22CE2094900C73A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				B502CC2D2D0417A800D7CB13 /* NewCalulatorView.swift */,
 				B502CBC32D01D6D000D7CB13 /* CalculatorView.swift */,
 				B502CBC52D01DA7000D7CB13 /* KeypadView.swift */,
+				B502CC312D04570300D7CB13 /* NewKeypadView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				B502CBC62D01DA7000D7CB13 /* KeypadView.swift in Sources */,
 				B502CBC92D020C4000D7CB13 /* CalculatorModel.swift in Sources */,
 				B502CC2E2D0417B000D7CB13 /* NewCalulatorView.swift in Sources */,
+				B502CC322D04570300D7CB13 /* NewKeypadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
