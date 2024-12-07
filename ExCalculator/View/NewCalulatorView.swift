@@ -9,7 +9,10 @@ import SwiftUI
 
 struct NewCalulatorView: View {
     var body: some View {
-        Text("0")
+        Text("123")
+            .font(.system(size: 60))
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .padding(.trailing)
     }
 }
 
